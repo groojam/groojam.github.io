@@ -537,6 +537,11 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 
+		&.center{
+			display:block;
+			margin: 0 auto _size(element-margin) auto;
+		}
+
 		&.fit {
 			display: block;
 			margin: 0 0 _size(element-margin) 0;
