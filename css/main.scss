@@ -901,7 +901,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		li {
 			@include padding(4em, 4em, (0,0,0,2em));
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
+			justify-content: center;
 			align-items: center;
 			position: relative;
 			text-align: center;
@@ -910,9 +911,17 @@ $baseurl: '{{ site.baseurl }}/images';
 			&.icon:before
 			{
 				font-size: 2.5em;
-				margin-bottom: 0.75em;
-				color: _palette(accent2, bg);
+				margin-right: 1em;
+				width: 1.5em;
+				text-align: center;
 			}
+
+			.content
+			{
+				text-align: left;
+				width: 50%;
+			}
+			
 			@for $i from 1 through _misc(max-features) {
 				$j: 0.035 * $i;
 
